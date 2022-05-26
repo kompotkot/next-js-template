@@ -32,7 +32,7 @@
 html,
 body {
 	background-color: var(--background-color-light);
-	color: var(--text-color-light);
+	color: var(--text-color-dark);
 	font-family: var(--font-family);
 }
 
