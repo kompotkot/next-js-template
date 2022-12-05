@@ -4,6 +4,9 @@ import Link from "next/link"
 
 import styles from "../styles/Layout.module.css"
 
+const LOGO_NAME = "logo name"
+const DEVELOPER_NAME = "© 2022 kompotkot"
+
 const Layout = ({ children, title = "Template", accountName }) => {
     const [lightTheme, setLightTheme] = useState<number>(0)
 
@@ -33,7 +36,7 @@ const Layout = ({ children, title = "Template", accountName }) => {
             style={{ backgroundColor: backgroundShadowColor[lightTheme] }}
         >
             <ul className={styles.site_nav}>
-                <li className={styles.nav_menu}>
+                <li className={styles.nav_first}>
                     <Link href="/account">
                         <p>Account settings</p>
                     </Link>
@@ -95,9 +98,9 @@ const Layout = ({ children, title = "Template", accountName }) => {
                                     backgroundShadowColor[lightTheme],
                             }}
                         >
-                            <li className={styles.nav_logo}>
+                            <li className={styles.nav_first}>
                                 <Link href="/">
-                                    <h1>logo name</h1>
+                                    <h1>{LOGO_NAME}</h1>
                                 </Link>
                             </li>
                             <li className={styles.nav_menu}>
@@ -159,7 +162,34 @@ const Layout = ({ children, title = "Template", accountName }) => {
                         backgroundColor: backgroundShadowColor[lightTheme],
                     }}
                 >
-                    <p>© 2022 kompotkot</p>
+                    <div className={styles.column_1}>
+                        <h3>{LOGO_NAME}</h3>
+                        <p>{DEVELOPER_NAME}</p>
+                    </div>
+                    <div className={styles.column_2}>
+                        <Link href="/">
+                            <img
+                                className={styles.social_link}
+                                src={
+                                    lightTheme
+                                        ? "discord-dark.svg"
+                                        : "discord-light.svg"
+                                }
+                                alt="Discord"
+                            />
+                        </Link>
+                        <Link href="/">
+                            <img
+                                className={styles.social_link}
+                                src={
+                                    lightTheme
+                                        ? "youtube-dark.svg"
+                                        : "youtube-light.svg"
+                                }
+                                alt="YouTube"
+                            />
+                        </Link>
+                    </div>
                 </footer>
             </div>
         </>

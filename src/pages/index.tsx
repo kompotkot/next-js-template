@@ -9,7 +9,7 @@ const Index: NextPage = () => {
 
     return (
         <Layout accountName={accountName}>
-            <div className={styles.container}>
+            <div className={styles.container_main}>
                 <div className={styles.sidebar_left}>Sidebar</div>
                 <div className={styles.content_area}>Content area</div>
             </div>
