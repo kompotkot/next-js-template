@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+}
+
+.site_nav {
+    display: flex; /* Make flex-container and inherits - flex-elements */
+    margin: 0;
+    padding: 0.5em;
+    list-style-type: none;
+    border-bottom: 1px solid var(--background-shadow-color);
+}
+
+.site_nav > .nav_logo {
+    flex: 3;
+}
+
+.site_nav > .nav_menu {
+    flex: 1;
+}
+
+.site_nav > .nav_right {
+    flex: 2;
+}
+
+.site_nav li {
+    margin-top: 0; /* Turn off owl */
+}
+
+.site_nav p {
+    display: block;
+    padding: 0.5em 1em;
+    margin: 0;
+    color: var(--text-color-dark);
+    text-align: center;
+    cursor: pointer;
+    /* background-color: red; */
+}
+
+.site_nav p:hover {
+    color: var(--primary-color);
+    border-right: 0.2em solid var(--primary-color);
+    border-left: 0.2em solid var(--primary-color);
+}
+
+.site_nav h1 {
+    display: block;
+    padding: 0 1em;
+    margin: 0;
+    color: var(--text-color-dark);
+    cursor: pointer;
+}
+
+.site_nav > li + li {
+    /* When li after another li */
+    margin-left: 1.5em;
+}
+
+/* Inner nav */
+
+.inner_nav {
+    margin: 0;
+}
+
+/* Main */
+.main {
+    flex: 1; /* Because of flex-direction: column it expand on all height of screen */
+}
+
+/* Footer */
+.footer {
+    border-top: 0.1em solid var(--background-shadow-color);
+    display: flex;
+    height: 2em;
+}
+
+.footer > p {
+    font-size: 0.8em;
+    display: block;
+    padding: 0.5em 1em;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
