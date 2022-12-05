@@ -9,6 +9,7 @@
     display: flex;
     margin: 0;
     list-style-type: none;
+    font-weight: 600;
 }
 
 .site_nav > .nav_first {
@@ -25,11 +26,10 @@
     flex: 1;
     padding: 0.5em;
     color: var(--secondary-color);
-    font-weight: 600;
 }
 
-.site_nav > .nav_settings {
-    padding-top: 0.8em;
+.site_nav > .nav_theme {
+    padding-top: 0.9em;
     width: 4em;
 }
 
@@ -61,7 +61,8 @@
 
 .site_nav img {
     margin: 0;
-    max-height: 1.5em;
+    max-height: 1.4em;
+    cursor: pointer;
 }
 
 .site_nav > li + li {

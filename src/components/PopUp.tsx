@@ -2,16 +2,16 @@ import React, { useState } from "react"
 import type { NextPage } from "next"
 
 import Layout from "../components/Layout"
-import styles from "../styles/Index.module.css"
+import styles from "../styles/PopUp.module.css"
 
-const Index = () => {
+const PopUp = ({ message }) => {
     return (
         <Layout>
-            <div className={styles.container_index}>
-                <p>Just a template.</p>
+            <div className={styles.container_popup}>
+                <p>{message}</p>
             </div>
         </Layout>
     )
 }
 
-export default Index
+export default PopUp

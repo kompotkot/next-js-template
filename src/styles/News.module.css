@@ -1,0 +1,13 @@
+.container_news {
+    display: flex;
+}
+
+.sidebar_left {
+    flex: 1;
+    margin: 0 1em;
+}
+
+.content_area {
+    flex: 4;
+    margin: 0 1em;
+}

@@ -7,8 +7,10 @@ import styles from "../styles/Layout.module.css"
 const LOGO_NAME = "logo name"
 const DEVELOPER_NAME = "© 2022 kompotkot"
 
-const Layout = ({ children, title = "Template", accountName }) => {
-    const [lightTheme, setLightTheme] = useState<number>(0)
+const Layout = ({ children, title = "Template" }) => {
+    const [accountName, setAccountName] = useState<string>("unknown")
+
+    const [lightTheme, setLightTheme] = useState<number>(1)
 
     const [language, setLanguage] = useState<string>("EN")
 
@@ -104,8 +106,8 @@ const Layout = ({ children, title = "Template", accountName }) => {
                                 </Link>
                             </li>
                             <li className={styles.nav_menu}>
-                                <Link href="/messages">
-                                    <p>Messages</p>
+                                <Link href="/news">
+                                    <p>News</p>
                                 </Link>
                             </li>
                             <li className={styles.nav_menu}>
@@ -135,17 +137,14 @@ const Layout = ({ children, title = "Template", accountName }) => {
                             >
                                 <p>{accountName}</p>
                             </li>
-                            <li
-                                className={styles.nav_settings}
-                                onMouseEnter={() => setSettingsNavShown(true)}
-                                onMouseLeave={() => setSettingsNavShown(false)}
-                            >
+                            <li className={styles.nav_theme}>
                                 <img
                                     className={styles.icon}
+                                    onClick={() => switchTheme()}
                                     src={
                                         lightTheme
-                                            ? "setting-gear-dark.svg"
-                                            : "setting-gear-light.svg"
+                                            ? "sun-dark.svg"
+                                            : "moon-light.svg"
                                     }
                                     alt="Settings"
                                 />
@@ -153,7 +152,6 @@ const Layout = ({ children, title = "Template", accountName }) => {
                         </ul>
                     </nav>
                     {accountNavShown && accountNav}
-                    {settingsNavShown && settingsNav}
                 </header>
                 <main className={styles.main}>{children}</main>
                 <footer
