@@ -5,27 +5,32 @@
 }
 
 /* Header */
-.header {
-}
-
 .site_nav {
-    display: flex; /* Make flex-container and inherits - flex-elements */
+    display: flex;
     margin: 0;
-    padding: 0.5em;
     list-style-type: none;
-    border-bottom: 1px solid var(--background-shadow-color);
 }
 
 .site_nav > .nav_logo {
     flex: 3;
+    padding: 0.5em;
 }
 
 .site_nav > .nav_menu {
     flex: 1;
+    padding: 0.5em;
 }
 
-.site_nav > .nav_right {
-    flex: 2;
+.site_nav > .nav_account {
+    flex: 1;
+    padding: 0.5em;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.site_nav > .nav_settings {
+    padding-top: 0.8em;
+    width: 4em;
 }
 
 .site_nav li {
@@ -39,21 +44,24 @@
     color: var(--text-color-dark);
     text-align: center;
     cursor: pointer;
-    /* background-color: red; */
 }
 
 .site_nav p:hover {
     color: var(--primary-color);
-    border-right: 0.2em solid var(--primary-color);
-    border-left: 0.2em solid var(--primary-color);
+    border-right: 0.1em solid var(--primary-color);
+    border-left: 0.1em solid var(--primary-color);
 }
 
 .site_nav h1 {
     display: block;
-    padding: 0 1em;
     margin: 0;
     color: var(--text-color-dark);
     cursor: pointer;
+}
+
+.site_nav img {
+    margin: 0;
+    max-height: 1.5em;
 }
 
 .site_nav > li + li {
@@ -74,7 +82,6 @@
 
 /* Footer */
 .footer {
-    border-top: 0.1em solid var(--background-shadow-color);
     display: flex;
     height: 2em;
 }
